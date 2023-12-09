@@ -13,7 +13,7 @@ const Tldraw = dynamic(async () => (await import('@tldraw/tldraw')).Tldraw, {
 
 const shapeUtils = [ResponseShapeUtil]
 
-export default function App() {
+function App() {
 	return (
 		<div className="editor">
 			<Tldraw
@@ -27,3 +27,8 @@ export default function App() {
 		</div>
 	)
 }
+
+
+export default dynamic(() => Promise.resolve(App), {
+	ssr: false,
+});
