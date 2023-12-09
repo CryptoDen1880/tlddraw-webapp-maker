@@ -22,6 +22,7 @@ function App() {
 				shapeUtils={shapeUtils}
 			>
 				<TldrawLogo />
+				
 				{/* <RiskyButCoolAPIKeyInput /> */}
 			</Tldraw>
 		</div>

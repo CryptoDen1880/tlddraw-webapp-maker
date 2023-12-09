@@ -29,9 +29,15 @@
 
 .tldrawLogo {
 	position: absolute;
-	z-index: 9999999;
-	bottom: 0px;
-	right: 0px;
+    z-index: 9999999;
+    bottom: 15px;
+    color: white;
+    right: 28px;
+    background: grey;
+    border-radius: 1em;
+    padding: 1em;
+    opacity: 0.6;
+	text-decoration: none;
 }
 
 .tldrawLogo__mobile {
