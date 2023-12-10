@@ -70,6 +70,7 @@ export async function makeReal(editor: Editor) {
 		// populate the response shape with the html we got back from openai.
 		populateResponseShape(editor, responseShapeId, openAiResponse)
 	} catch (e) {
+		console.log(e);
 		// if something went wrong, get rid of the unnecessary response shape
 		editor.deleteShape(responseShapeId)
 		throw e
