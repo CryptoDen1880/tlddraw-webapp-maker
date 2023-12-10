@@ -132,6 +132,7 @@ function populateResponseShape(
 	openAiResponse: GPT4VCompletionResponse
 ) {
 	if (openAiResponse.error) {
+		console.log(openAiResponse.error)
 		throw new Error(openAiResponse.error.message)
 	}
 
