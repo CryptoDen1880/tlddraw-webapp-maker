@@ -5,7 +5,7 @@ import logoWhite from '../brain-text-white.webp'
 import logoBlack from '../brain-text-black.webp'
 import Image from 'next/image'
 import { useEditor } from '@tldraw/tldraw'
-import { uiContext } from '../page'
+import { uiContext } from '../context/uiContext'
 
 export function TldrawLogo() {
 	const breakpoint = useBreakpoint()
