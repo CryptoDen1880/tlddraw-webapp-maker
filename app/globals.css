@@ -45,9 +45,9 @@
 }
 
 .makeRealButton {
-	background: var(--color-primary);
+	background: black;
 	color: white;
-	border: none;
+	border: 2px solid white;
 	font: inherit;
 	font-weight: 600;
 	padding: var(--space-3) var(--space-4);
