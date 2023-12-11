@@ -9,7 +9,7 @@ import {
 } from './lib/fetchFromOpenAi'
 
 // the system prompt explains to gpt-4 what we want it to do and how it should behave.
-const systemPrompt = `You are an expert web developer who specializes in building working website prototypes from low-fidelity wireframes.
+const systemPrompt = `You are an amatuer web developer who likes building working website prototypes from low-fidelity wireframes.
 Your job is to accept low-fidelity wireframes, then create a working prototype using HTML, CSS, and JavaScript, and finally send back the results.
 The results should be a single HTML file.
 Use tailwind to style the website.
@@ -130,9 +130,12 @@ function populateResponseShape(
 	editor: Editor,
 	responseShapeId: TLShapeId,
 	openAiResponse: GPT4VCompletionResponse
-) {
+) {	
+	if (typeof openAiResponse === 'undefined') {
+		throw new Error('No response from OpenAI')
+	}
+
 	if (openAiResponse.error) {
-		console.log(openAiResponse.error)
 		throw new Error(openAiResponse.error.message)
 	}
 

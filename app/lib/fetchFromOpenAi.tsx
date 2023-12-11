@@ -1,23 +1,22 @@
-'use server'
+
 
 export async function fetchFromOpenAi(
 	providedApiKey: string,
 	body: GPT4VCompletionRequest
 ): Promise<GPT4VCompletionResponse> {
-	const apiKey = providedApiKey ?? process.env.OPENAI_API_KEY
+	// const apiKey = providedApiKey ?? process.env.OPENAI_API_KEY
 
-	if (!apiKey) {
-		throw new Error(
-			'You need to provide an API key. Make sure OPENAI_API_KEY is set in your .env file.'
-		)
-	}
+	// if (!apiKey) {
+	// 	throw new Error(
+	// 		'You need to provide an API key. Make sure OPENAI_API_KEY is set in your .env file.'
+	// 	)
+	// }
 
 	try {
-		const repsonse = await fetch('https://api.openai.com/v1/chat/completions', {
+		const repsonse = await fetch('/api', {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json',
-				Authorization: `Bearer ${apiKey}`,
+				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(body),
 		})
