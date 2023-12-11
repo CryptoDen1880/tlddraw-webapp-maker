@@ -13,7 +13,9 @@ export function TldrawLogo() {
 	const { isDarkMode, setIsDarkMode } = useContext(uiContext)
 
 	useEffect(() => {
-		setIsDarkMode(user.getIsDarkMode())
+		const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+		setIsDarkMode(prefersDarkMode)
+		user.updateUserPreferences({ isDarkMode: prefersDarkMode })
 	}, [user])
 
 	console.log('isDarkMode', isDarkMode)
