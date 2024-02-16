@@ -6,8 +6,8 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'MetaVisionAI',
-	description: 'Turn your drawings into code',
+	title: 'MarkupAI',
+	description: 'Whatever you invision can come to life',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

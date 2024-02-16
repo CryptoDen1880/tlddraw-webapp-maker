@@ -1,8 +1,8 @@
 
 import { useState, useEffect, use, useContext } from 'react'
 import { useBreakpoint } from '@tldraw/tldraw'
-import logoWhite from '../brain-text-white.webp'
-import logoBlack from '../brain-text-black.webp'
+import logoWhite from '../logo-white.png'
+import logoBlack from '../logo-white.png'
 import Image from 'next/image'
 import { useEditor } from '@tldraw/tldraw'
 import { uiContext } from '../context/uiContext'
@@ -18,7 +18,6 @@ export function TldrawLogo() {
 		user.updateUserPreferences({ isDarkMode: prefersDarkMode })
 	}, [user])
 
-	console.log('isDarkMode', isDarkMode)
 	return (
 		<a
 			className={`tldrawLogo ${breakpoint < 5 ? 'tldrawLogo__mobile' : ''}`}

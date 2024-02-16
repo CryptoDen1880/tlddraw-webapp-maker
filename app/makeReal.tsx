@@ -9,7 +9,7 @@ import {
 } from './lib/fetchFromOpenAi'
 
 // the system prompt explains to gpt-4 what we want it to do and how it should behave.
-const systemPrompt = `You are an semi professional web developer who likes to build working website prototypes from low-fidelity wireframes.
+const systemPrompt = `You are an expert web developer who is dedicated to build working website prototypes from low-fidelity wireframes.
 Your job is to accept low-fidelity wireframes, then create a working prototype using HTML, CSS, and JavaScript, and finally send back the results.
 The results should be a single HTML file.
 Use tailwind to style the website.
