@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'MarkupAI',
-	description: 'Whatever you invision can come to life',
+	description: 'Whatever you envision can come to life',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

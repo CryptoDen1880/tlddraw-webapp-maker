@@ -21,7 +21,7 @@ export function TldrawLogo() {
 	return (
 		<a
 			className={`tldrawLogo ${breakpoint < 5 ? 'tldrawLogo__mobile' : ''}`}
-			href="https://metavision-ai.io/"
+			href="https://app.markup-ai.com/"
 		>
 			<Image src={isDarkMode ? logoWhite : logoBlack} style={{ width: '120px', height: 'auto' }} height={'200'} width={'120'} alt="MetaVisionAI" />
 		</a>

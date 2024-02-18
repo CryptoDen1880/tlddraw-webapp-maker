@@ -21,7 +21,7 @@ export function MakeRealButton() {
 
 	return (
 		<button className="makeRealButton" onClick={handleClick}>
-			Make Real
+			Generate
 		</button>
 	)
 }
